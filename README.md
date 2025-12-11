@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Flutter Launch Pad Starter 🚀
 
 Welcome to **Coding Liquids' Complete Flutter Guide: Build Android, iOS, and Web by Coding Liquids!** 
@@ -17,3 +18,6 @@ Enroll in the course today and take your first step into the expansive world of 
 ### Connect with Sagnik
 
 Want to know more about the creator behind this project? Connect with Sagnik Bhattacharya on [LinkedIn](https://www.linkedin.com/in/sagnik-bhattacharya-916b9463/) and dive deeper into the world of coding and innovation.
+=======
+# Launch_Pad
+>>>>>>> 4cdf55de19f55a750bbf772bf83bdc964e8b8ee7
