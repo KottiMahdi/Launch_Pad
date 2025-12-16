@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'pad_launch.dart';  // Add this import
+import 'widgets/pad_launch.dart';  // Add this import
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +23,13 @@ class MyApp extends StatelessWidget {
               style: GoogleFonts.orbitron(
                   color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
             ),
+          ),
+          floatingActionButton: FloatingActionButton(
+            backgroundColor: Colors.red,
+            child: const Icon(Icons.stop),
+            onPressed: () {
+              // We'll improve this later
+            },
           ),
           body: Center(
             child: Wrap(
