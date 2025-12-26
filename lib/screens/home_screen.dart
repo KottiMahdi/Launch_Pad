@@ -1,0 +1,74 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../audio/audio_manager.dart';
+import '../widgets/pad_launch.dart';
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: Text(
+            "LaunchPad",
+            style: GoogleFonts.orbitron(
+                color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.red,
+          child: const Icon(Icons.stop),
+          onPressed: () {
+            AudioManager().stopAll();
+          },
+        ),
+        body: Center(
+          child: Wrap(
+            spacing: 6,
+            runSpacing: 6 ,
+            children: [
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "1.mp3"),
+              PadLaunch(Color(0xffff2525), Color(0xffc40050), "2.mp3"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "3.mp3"),
+              PadLaunch(Color(0xffE247FC), Color(0xffA23AB7), "4.mp3"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "5.mp3"),
+              PadLaunch(Color(0xffff2525), Color(0xffc40050), "6.mp3"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "7.mp3"),
+              PadLaunch(Color(0xffE247FC), Color(0xffA23AB7), "8.mp3"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "9.mp3"),
+              PadLaunch(Color(0xffff2525), Color(0xffc40050), "10.mp3"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "11.mp3"),
+              PadLaunch(Color(0xffE247FC), Color(0xffA23AB7), "12.mp3"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "13.mp3"),
+              PadLaunch(Color(0xffff2525), Color(0xffc40050), "14.mp3"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "15.mp3"),
+              PadLaunch(Color(0xffE247FC), Color(0xffA23AB7), "16.mp3"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "17.mp3"),
+              PadLaunch(Color(0xffff2525), Color(0xffc40050), "18.mp3"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "19.mp3"),
+              PadLaunch(Color(0xffE247FC), Color(0xffA23AB7), "20.wav"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "21.mp3"),
+              PadLaunch(Color(0xffff2525), Color(0xffc40050), "22.wav"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "23.wav"),
+              PadLaunch(Color(0xffE247FC), Color(0xffA23AB7), "24.wav"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "25.wav"),
+              PadLaunch(Color(0xffff2525), Color(0xffc40050), "26.wav"),
+              PadLaunch(Color(0xFFADCBFC), Color(0xff067CCB), "27.wav"),
+              PadLaunch(Color(0xffE247FC), Color(0xffA23AB7), "28.wav"),
+            ],
+          ),
+        ),
+        backgroundColor: Colors.black,
+      ),
+    );
+  }
+}

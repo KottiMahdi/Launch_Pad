@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../audio/audio_manager.dart';
 
 class PadLaunch extends StatefulWidget {
   final Color colorCenter;
@@ -15,7 +16,7 @@ class PadLaunch extends StatefulWidget {
 class _PadLaunchState extends State<PadLaunch> {
   late Color _colorCenter;
   late Color _colorOutline;
-  final player = AudioPlayer();
+  late AudioPlayer player;
   double _scale = 1.0;
 
 
@@ -23,8 +24,16 @@ class _PadLaunchState extends State<PadLaunch> {
   void initState() {
     _colorCenter = widget.colorCenter;
     _colorOutline = widget.colorOutline;
+    player = AudioManager().createPlayer();
     super.initState();
   }
+
+  @override
+  void dispose() {
+    player.dispose();
+    super.dispose();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +46,7 @@ class _PadLaunchState extends State<PadLaunch> {
           _scale = 0.9;
           _colorCenter = Colors.white;
           _colorOutline = Colors.white;
+          player.stop();
           player.play(AssetSource(widget.note));
         });
         await Future.delayed(Duration(milliseconds: 150));
